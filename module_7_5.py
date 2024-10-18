@@ -1,6 +1,12 @@
 import os
 import time
 
+if os.path.exists('test'):
+    os.chdir('test')
+else:
+    os.mkdir('test')
+    os.chdir('test')
+
 for root, dirs, files in os.walk('.'):
     for file in files:
         filepath = os.path.join(file)
